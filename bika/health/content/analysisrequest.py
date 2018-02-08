@@ -57,7 +57,7 @@ def getDoctorUID(instance):
 
 # We use this index to sort columns and filter lists
 @indexer(IAnalysisRequest, IBikaCatalogAnalysisRequestListing)
-def getPatient(instance):
+def getPatientTitle(instance):
     field = instance.getField('Patient', '')
     item = field.get(instance) if field else None
     value = item and item.Title() or ''
